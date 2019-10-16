@@ -9,7 +9,6 @@ import (
 )
 
 func Test_example_module(t *testing.T) {
-    t.Parallel()
 
     region := "us-west-2"
 
