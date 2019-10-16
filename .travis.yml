@@ -16,7 +16,7 @@ sudo: false
 install: true
 before_install:
   - wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_${OS}_${ARCH}.zip
-  - sudo unzip -d /usr/bin terraform_$TERRAFORM_VERSION_$OS_$ARCH.zip
+  - sudo unzip -d /usr/bin terraform_${TERRAFORM_VERSION}_${OS}_${ARCH}.zip
 script:
   - env GO111MODULE=on make
 notifications:
