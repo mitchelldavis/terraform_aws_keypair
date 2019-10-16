@@ -1,0 +1,23 @@
+language: go
+
+go:
+  - 1.13.x
+os:
+  - linux
+env:
+  - TERRAFORM_VERSION=0.12.10 ARCH=amd64 OS=linux
+  - TERRAFORM_VERSION=0.11.15 ARCH=amd64 OS=linux
+
+services:
+  - docker
+
+dist: xenial
+sudo: false
+install: true
+before_install:
+  - wget https://releases.hashicorp.com/terraform/$TERRAFORM_VERSION/terraform_$TERRAFORM_VERSION_$OS_$ARCH.zip
+  - sudo unzip -d /usr/bin terraform_$TERRAFORM_VERSION_$OS_$ARCH.zip
+script:
+  - env GO111MODULE=on make
+notifications:
+  email: false
