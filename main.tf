@@ -1,9 +1,9 @@
 variable "key_name" {
-  type  = string
+  type  = "string"
 }
 
 variable "rsa_bits" {
-  type    = string
+  type    = "string"
   default = "4096"
 }
 
