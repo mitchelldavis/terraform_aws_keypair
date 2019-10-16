@@ -1,6 +1,8 @@
 Terraform AWS Key Pair 
 ---
 
+[![Build Status](https://travis-ci.org/mitchelldavis/terraform_aws_keypair.svg?branch=master)](https://travis-ci.org/mitchelldavis/terraform_aws_keypair)
+
 This terraform module is a simple module to declare a key pair.
 
 LICENSE
